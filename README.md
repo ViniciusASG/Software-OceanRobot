@@ -1,9 +1,15 @@
 # Software-OceanRobot
+
 1-ESPW
+
 CEO
+
 Vinicius Augusto RM 557065
+
 João Pedro RM 558375
+
 Problema
+
 A "Economia Azul" visa garantir que as atividades humanas nos oceanos sejam ecologicamente responsáveis, socialmente inclusivas e economicamente viáveis a longo prazo. Isso envolve práticas de gestão ambiental, tecnologias inovadoras e colaboração entre governos, empresas e comunidades locais. Atualmente, os oceanos enfrentam desafios críticos como a destruição de habitats, poluição e mudanças climáticas, que impactam tanto os ecossistemas marinhos quanto a economia global. O Desafio de "Inovação Azul" 2024 incentiva estudantes e entusiastas a desenvolver soluções sustentáveis para a gestão dos oceanos, alertando e informando populações costeiras e empresas sobre a saúde dos mares.
 
 Nossa Solução
