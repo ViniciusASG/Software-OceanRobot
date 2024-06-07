@@ -1,12 +1,3 @@
-print('Ola Bem-Vindo ao nosso software OceanRobot, um jogo onde voce aprende e se diverte!!! ')
-nomeUsuario = input('Vamos Começar o jogo, Qual o seu nome: ')
-print(f'Ola {nomeUsuario}, Estamos Felizes em ter voce no nosso jogo')
-pontos = 0
-oceanos = ['ATLANTICO', 'PACIFICO', 'INDICO', 'ARTICO']
-oceanosUsuario = ['']
-professores = ['DANILO RODRIGUES', 'JONES EGYDIO', 'LUCAS DEMETRIUS AUGUSTO', 'LUCAS SILVA DE SOUSA', 'JOSÉ HENRIQUE', 'ANA CLAUDIA', 'CAIO VINÍCIUS ']
-materias = ['COMPUTATIONAL THINKING WITH PYTHON', 'DIFFERENTIATED PROBLEM SOLVING', 'EDGE COMPUTING & COMPUTER SYSTEMS', 'FRONT-END DESIGN', 'SOFTWARE & TOTAL EXPERIENCE DESIGN',
-            'STORYTELLING E INSPIRAÇÃO EMPREENDEDORA', 'WEB DEVELOPMENT']
 def oceanosfunc(msgOceanos):
     ponto = 0
     while True:
@@ -22,10 +13,10 @@ def oceanosfunc(msgOceanos):
             print('Voce ja acertou essa opção, esse oceano existe ')
         else:
             print('Esse oceano nao existe, lembre de nao usar acentos')
-        if ponto == 4:
+        if ponto == 5:
             return ponto
 '''pontos = oceanosfunc('Vamos Começar o jogo')'''
-print(f'Muito Bem {nomeUsuario} voce esta com {pontos} pontos')
+'''print(f'Muito Bem {nomeUsuario} voce esta com {pontos} pontos')'''
 
 def maiorOceano(msgMaiorOceano):
     maiorUsuario = input('Qual o maior oceano do mundo?, nao use acentos ').upper()
@@ -120,15 +111,23 @@ def consultarProfessorMaterias():
     print('Professor não encontrado.')
 
 '''consultarProfessorMaterias()'''
-
+print('Ola Bem-Vindo ao nosso software OceanRobot, um jogo onde voce aprende e se diverte!!! ')
+nomeUsuario = input('Vamos Começar o jogo, Qual o seu nome: ')
+print(f'Ola {nomeUsuario}, Estamos Felizes em ter voce no nosso jogo')
+pontos = 0
+oceanos = ['ATLANTICO', 'PACIFICO', 'INDICO', 'ARTICO', 'Antártico']
+oceanosUsuario = ['']
+professores = ['DANILO RODRIGUES', 'JONES EGYDIO', 'LUCAS DEMETRIUS AUGUSTO', 'LUCAS SILVA DE SOUSA', 'JOSÉ HENRIQUE', 'ANA CLAUDIA', 'CAIO VINÍCIUS ']
+materias = ['COMPUTATIONAL THINKING WITH PYTHON', 'DIFFERENTIATED PROBLEM SOLVING', 'EDGE COMPUTING & COMPUTER SYSTEMS', 'FRONT-END DESIGN', 'SOFTWARE & TOTAL EXPERIENCE DESIGN',
+            'STORYTELLING E INSPIRAÇÃO EMPREENDEDORA', 'WEB DEVELOPMENT']
 while True:
     print(f'Essas são nossas paginas qual voce deseja acessar? ')
     primeiraOpcaoUsuario = input('''para acessar nossos jogos aperte o numero 1, para acessar nosso menu de informações aperte o numero 2,
-                                    para acessar e saber mais sobre nossos professores aperte a tecla 3 ''')
+para acessar e saber mais sobre nossos professores aperte a tecla 3 ''')
     while True:
         if not primeiraOpcaoUsuario.isnumeric():
             primeiraOpcaoUsuario = input('''para acessar nossos jogos aperte o numero 1, para acessar nosso menu de informações aperte o numero 2,
-                                        para acessar e saber mais sobre nossos professores aperte a tecla 3 ''')
+para acessar e saber mais sobre nossos professores aperte a tecla 3 ''')
         else:
             break
     primeiraOpcaoUsuario = int(primeiraOpcaoUsuario)    
@@ -136,97 +135,84 @@ while True:
         while True:
             print(f'Bem vindo aos jogos vamos começar atualmente voce esta com {pontos} pontos, jogue para conseguir mais pontos ')
             escolhaJogosUsuario = input('''Para entrar no jogo dos Oceanos Gerais aperte o 1,Para entrar no jogo do maior oceano aperte
-                                            a tecla 2, Para entrar no jogo do menor oceano aperte o 3, Para entrar no jogo do oceano em volta
-                                            do brasil aperte 4,para saber as regras do jogo aperte 5, para voltar ao menu anterior aperte 6 ''')
+a tecla 2, Para entrar no jogo do menor oceano aperte o 3, Para entrar no jogo do oceano em volta
+do brasil aperte 4,para saber as regras do jogo aperte 5, para voltar ao menu anterior aperte 6 ''')
             while True:
                 if not escolhaJogosUsuario.isnumeric():
                     escolhaJogosUsuario = input('''Para entrar no jogo dos Oceanos Gerais aperte o 1,Para entrar no jogo do maior oceano aperte
-                                            a tecla 2, Para entrar no jogo do menor oceano aperte o 3, Para entrar no jogo do oceano em volta
-                                            do brasil aperte 4,para saber as regras do jogo aperte 5, para voltar ao menu anterior aperte 6 ''')
+a tecla 2, Para entrar no jogo do menor oceano aperte o 3, Para entrar no jogo do oceano em volta
+do brasil aperte 4,para saber as regras do jogo aperte 5, para voltar ao menu anterior aperte 6 ''')
                 else:   
                     break
             escolhaJogosUsuario = int(escolhaJogosUsuario)   
             if escolhaJogosUsuario == 1:
                 pontos += oceanosfunc('Vamos Começar o jogo dos oceanos gerais ')
                 print(f'O jogador {nomeUsuario} tem {pontos} pontos')
-                break
             elif escolhaJogosUsuario == 2:
                 pontos += maiorOceano('Vamos Começar o jogo do maior oceano ')
                 print(f'O jogador {nomeUsuario} tem {pontos} pontos')
-                break
             elif escolhaJogosUsuario == 3:
                 pontos += menorOceano('Vamos Jogar o jogo do menor oceano')
                 print(f'O jogador {nomeUsuario} tem {pontos} pontos')
-                break
             elif escolhaJogosUsuario == 4:
                 pontos += brasilOceano('Vamos jogar o jogo do oceano no em volta do brasil')
                 print(f'O jogador {nomeUsuario} tem {pontos} pontos')
-                break
             elif escolhaJogosUsuario == 5:
                 regrasJogos()
             elif escolhaJogosUsuario == 6:
-                continue
+                break
             else:
                 print('Voce digitou uma opção invalida, escolha uma opção valida')
     elif primeiraOpcaoUsuario == 2:
         print('Ola estamos felizes em saber que voce quer saber mais sobre o projeto Ocean Robot ')
         while True:
             escolhaInfosUsuarios = input('''Para saber sobre todos os oceanos aperte o 1, para saber sobre o maior oceano aperte 2,
-                                            para saber sobre o menor oceano aperte 3, para saber sobre o oceano que banha o brasil aperte 4, 
-                                            para saber sobre o nosso projeto aperte 5, para saber sobre o oceans20 aperte 6, para voltar ao menu anterior aperte 7 ''')
+para saber sobre o menor oceano aperte 3, para saber sobre o oceano que banha o brasil aperte 4, 
+para saber sobre o nosso projeto aperte 5, para saber sobre o oceans20 aperte 6, para voltar ao menu anterior aperte 7 ''')
             while True:
                 if not escolhaInfosUsuarios.isnumeric():
                     escolhaInfosUsuarios = input('''Para saber sobre todos os oceanos aperte o 1, para saber sobre o maior oceano aperte 2,
-                                            para saber sobre o menor oceano aperte 3, para saber sobre o oceano que banha o brasil aperte 4, 
-                                            para saber sobre o nosso projeto aperte 5, para saber sobre o oceans20 aperte 6, para voltar ao menu anterior aperte 7 ''')
+para saber sobre o menor oceano aperte 3, para saber sobre o oceano que banha o brasil aperte 4, 
+para saber sobre o nosso projeto aperte 5, para saber sobre o oceans20 aperte 6, para voltar ao menu anterior aperte 7 ''')
                 else:   
                     break
             escolhaInfosUsuarios = int(escolhaInfosUsuarios)    
             if escolhaInfosUsuarios == 1:
                 infTodosOsOceanos()
-                break
             elif escolhaInfosUsuarios == 2:
                 infmaiorOceano()
-                break
             elif escolhaInfosUsuarios == 3:
                 infMenorOceano()
-                break
             elif escolhaInfosUsuarios == 4:
                 infBrasilOceano()
-                break
             elif escolhaInfosUsuarios == 5:
                 infNossoProjeto()
-                break
             elif escolhaInfosUsuarios == 6:
                 infOceans20()
-                break
             elif escolhaInfosUsuarios == 7:
-                continue
+                break
             else:
                 print('Voce digitou uma opção invalida, escolha uma opção valida')
     elif primeiraOpcaoUsuario == 3:
         ('Ola então voce quer saber mais sobre nossos professores')
         while True:
             escolhaProfessoresUsuario = input('''Para saber quais sao nossos professores aperte o 1, Para saber qual são as nossas materias aperte o 2
-                                                para realizar uma consulta de qual professor leciona qual materia aperte o 3, para voltar ao menu anterior aperte o 4 ''')
+para realizar uma consulta de qual professor leciona qual materia aperte o 3, para voltar ao menu anterior aperte o 4 ''')
             while True:
                 if not escolhaProfessoresUsuario.isnumeric():
                     escolhaProfessoresUsuario = input('''Para saber quais sao nossos professores aperte o 1, Para saber qual são as nossas materias aperte o 2
-                                                para realizar uma consulta de qual professor leciona qual materia aperte o 3, para voltar ao menu anterior aperte o 4 ''')
+para realizar uma consulta de qual professor leciona qual materia aperte o 3, para voltar ao menu anterior aperte o 4 ''')
                 else:   
                     break
             escolhaProfessoresUsuario = int(escolhaProfessoresUsuario)
             if escolhaProfessoresUsuario == 1:
                 infProfessores()
-                break
             elif escolhaProfessoresUsuario == 2:
                 infMaterias()
-                break
             elif escolhaProfessoresUsuario == 3:
                 consultarProfessorMaterias()
-                break
             elif escolhaProfessoresUsuario == 4:
-                continue
+                break
             else:
                 print('Voce digitou uma opção invalida, escolha uma opção valida')
     else:
